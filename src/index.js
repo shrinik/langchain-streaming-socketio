@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
         const chunks = [];
         const ollamaLlm = new ollama.ChatOllama({
             baseUrl: "http://localhost:11434", // Default value
-            model: "phi",
+            model: "mistral",
             streaming: true,
             callbacks: [
                 {

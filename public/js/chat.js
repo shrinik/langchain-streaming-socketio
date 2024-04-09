@@ -9,7 +9,7 @@ document.querySelector("#btnClear").addEventListener('click', (e) => {
 document.querySelector("#query-form").addEventListener('submit', (e) => {
     e.preventDefault()
     const query = e.target.elements.query.value
-    document.querySelector('#chatbox').value += "\n\n-----------------------------------------------------------------------\n\n"
+    document.querySelector('#chatbox').value += "\n\n" + query + "\n"
     socket.emit('query', query)
 })
 
